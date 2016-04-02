@@ -151,7 +151,7 @@ public class ArticleListActivity extends AppCompatActivity implements
                             + " by "
                             + mCursor.getString(ArticleLoader.Query.AUTHOR));
 
-            Log.v("TAG", mCursor.getString(ArticleLoader.Query.THUMB_URL));
+            //Log.v("TAG", mCursor.getString(ArticleLoader.Query.THUMB_URL));
 
             holder.thumbnailView.setImageUrl(
                     mCursor.getString(ArticleLoader.Query.THUMB_URL),

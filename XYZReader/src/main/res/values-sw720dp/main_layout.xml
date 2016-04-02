@@ -1,0 +1,5 @@
+<resources>
+    <!-- list -->
+    <dimen name="list_side_margin">100dp</dimen>
+
+</resources>

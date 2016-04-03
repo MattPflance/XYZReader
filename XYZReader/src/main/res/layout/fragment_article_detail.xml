@@ -9,13 +9,24 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <!--suppress AndroidLintContentDescription -->
-        <ImageView
-            android:id="@+id/photo"
-            android:scaleType="centerCrop"
+        <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:minHeight="310dp"/>
+            android:layout_height="wrap_content">
+
+            <!--suppress AndroidLintContentDescription -->
+            <ImageView
+                android:id="@+id/photo"
+                android:scaleType="centerCrop"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="310dp"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/detail_gradient"/>
+
+        </FrameLayout>
 
         <ScrollView
             android:id="@+id/scrollview"

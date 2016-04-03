@@ -22,4 +22,8 @@
     <color name="theme_primary_dark">#E7410A</color> <!-- Dark orange from mipmap -->
     <color name="theme_accent">#448AFF</color> <!-- Blue A200 -->
 
+    <!-- Other Colors -->
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
+
 </resources>

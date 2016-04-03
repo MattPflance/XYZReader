@@ -11,6 +11,7 @@ import android.os.Bundle;
 import android.support.v13.app.FragmentStatePagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.util.TypedValue;
 import android.view.View;
 import android.view.ViewGroup;
@@ -34,6 +35,7 @@ public class ArticleDetailActivity extends AppCompatActivity
     //private int mTopInset;
 
     private ViewPager mPager;
+    private Toolbar mToolbar;
     private MyPagerAdapter mPagerAdapter;
     //private View mUpButtonContainer;
     //private View mUpButton;
@@ -75,6 +77,12 @@ public class ArticleDetailActivity extends AppCompatActivity
                 updateUpButtonPosition();
             }
         });
+
+        mToolbar = (Toolbar) findViewById(R.id.overlay_toolbar);
+        setSupportActionBar(mToolbar);
+        getSupportActionBar().setHomeButtonEnabled(true);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setTitle("");
 
 //        mUpButtonContainer = findViewById(R.id.up_container);
 //

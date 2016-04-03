@@ -6,6 +6,12 @@
     <dimen name="subheading_text_size">16sp</dimen>
     <dimen name="body_text_size">14sp</dimen>
 
+    <!-- Material Design Elevations -->
+    <dimen name="fab_pressed_elevation">12dp</dimen>
+    <dimen name="fab_resting_elevation">6dp</dimen>
+    <dimen name="app_bar_elevation">4dp</dimen>
+    <dimen name="card_view_resting_elevation">2dp</dimen>
+
     <!-- detail -->
     <item name="body_line_spacing_multiplier" format="float" type="fraction">1.25</item>
     <!--<dimen name="detail_title_text_size">32sp</dimen>-->

@@ -12,19 +12,9 @@
     <dimen name="app_bar_elevation">4dp</dimen>
     <dimen name="card_view_resting_elevation">2dp</dimen>
 
-    <!-- detail -->
-    <item name="body_line_spacing_multiplier" format="float" type="fraction">1.25</item>
-    <!--<dimen name="detail_title_text_size">32sp</dimen>-->
-    <!--<dimen name="detail_body_text_size">22sp</dimen>-->
-
-    <dimen name="fab_elevation">2dp</dimen>
-    <dimen name="fab_press_translation_z">6dp</dimen>
-    <dimen name="fab_margin">24dp</dimen>
-
-    <!-- Main Activity -->
-    <dimen name="app_bar_height">112dp</dimen>
-
-    <!-- Article List Item -->
-    <dimen name="thumbnail_height">150dp</dimen>
+    <!-- Material Keylines and Margins -->
+    <dimen name="left_keyline">72dp</dimen>
+    <dimen name="left_keyline_minus_margin">56dp</dimen>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
 
 </resources>

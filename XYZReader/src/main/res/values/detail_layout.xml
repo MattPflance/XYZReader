@@ -2,9 +2,7 @@
 
     <item name="body_line_spacing_multiplier" format="float" type="fraction">1.25</item>
     <dimen name="fab_vert_padding">28dp</dimen>
-    <dimen name="fab_elevation">2dp</dimen>
-    <dimen name="fab_press_translation_z">6dp</dimen>
-    <dimen name="fab_margin">24dp</dimen>
+    <dimen name="fab_margin">12dp</dimen>
 
     <bool name="detail_is_card">false</bool>
     <dimen name="detail_photo_height">304dp</dimen>

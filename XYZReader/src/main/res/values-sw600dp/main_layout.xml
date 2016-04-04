@@ -1,5 +1,8 @@
 <resources>
 
-    <!-- Uhh.. -->
+    <!-- Main Activity -->
+    <integer name="list_column_count">3</integer>
+
+    <!-- Article List Item -->
 
 </resources>

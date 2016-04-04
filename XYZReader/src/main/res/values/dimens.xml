@@ -17,4 +17,7 @@
     <dimen name="left_keyline_minus_margin">56dp</dimen>
     <dimen name="activity_horizontal_margin">16dp</dimen>
 
+    <!-- Other -->
+    <dimen name="custom_match_parent">-1px</dimen>
+
 </resources>

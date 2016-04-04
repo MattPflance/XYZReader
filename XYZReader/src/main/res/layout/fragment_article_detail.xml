@@ -107,7 +107,7 @@
             app:fabSize="normal"
             app:elevation="@dimen/fab_resting_elevation"
             app:pressedTranslationZ="@dimen/fab_pressed_elevation"
-            app:layout_anchor="@id/meta_bar"
+            app:layout_anchor="@id/fab_anchor_id"
             app:layout_anchorGravity="bottom|right|end"/>
 
     </android.support.design.widget.CoordinatorLayout>

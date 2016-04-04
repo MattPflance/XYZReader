@@ -7,4 +7,8 @@
     <dimen name="card_view_horiz_margin">112dp</dimen>
     <dimen name="card_view_vert_margin">16dp</dimen>
 
+    <!-- Floating Action Button -->
+    <item name="fab_anchor_id" type="id">@id/photo</item>
+    <dimen name="fab_margin">28dp</dimen>
+
 </resources>

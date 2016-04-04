@@ -1,7 +1,11 @@
 <resources>
 
-    <dimen name="list_side_margin">4dp</dimen>
-    <dimen name="list_toolbar_side_margin">0dp</dimen>
+    <!-- Main Activity -->
+    <dimen name="app_bar_horiz_padding">16dp</dimen>
     <integer name="list_column_count">3</integer>
+
+    <!-- Article List Item -->
+    <dimen name="thumbnail_height">120dp</dimen>
+
 
 </resources>

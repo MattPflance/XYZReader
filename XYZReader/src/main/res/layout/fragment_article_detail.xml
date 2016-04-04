@@ -18,8 +18,7 @@
                 android:id="@+id/photo"
                 android:scaleType="centerCrop"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:minHeight="310dp"/>
+                android:layout_height="@dimen/detail_photo_height"/>
 
             <View
                 android:layout_width="match_parent"

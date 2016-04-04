@@ -1,7 +1,19 @@
 <resources>
 
-    <bool name="detail_is_card">true</bool>
-    <dimen name="detail_photo_height">600dp</dimen>
-    <dimen name="detail_card_top_margin">256dp</dimen>
+    <!-- Image -->
+    <dimen name="detail_photo_height">384dp</dimen>
+
+    <!-- Scroll View Layout -->
+    <dimen name="detail_card_top_margin">120dp</dimen>
+
+    <!-- Card Content -->
+    <item name="body_line_spacing_multiplier" format="float" type="fraction">1.3</item>
+    <dimen name="card_view_horiz_margin">240dp</dimen>
+    <dimen name="card_view_vert_margin">16dp</dimen>
+
+    <!-- Floating Action Button -->
+    <item name="fab_anchor_id" type="id">@id/photo</item>
+    <dimen name="fab_vert_padding">16dp</dimen>
+    <dimen name="fab_margin">96dp</dimen>
 
 </resources>

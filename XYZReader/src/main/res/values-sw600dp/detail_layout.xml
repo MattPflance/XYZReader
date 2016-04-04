@@ -17,6 +17,7 @@
 
     <!-- Floating Action Button -->
     <item name="fab_anchor_id" type="id">@id/photo</item>
+    <dimen name="fab_vert_padding">16dp</dimen>
     <dimen name="fab_margin">12dp</dimen>
 
 </resources>

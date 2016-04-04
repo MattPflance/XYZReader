@@ -1,5 +1,7 @@
 <resources>
 
-    <dimen name="list_side_margin">120dp</dimen>
+    <dimen name="list_side_margin">4dp</dimen>
+    <dimen name="list_toolbar_side_margin">0dp</dimen>
+    <integer name="list_column_count">3</integer>
 
 </resources>

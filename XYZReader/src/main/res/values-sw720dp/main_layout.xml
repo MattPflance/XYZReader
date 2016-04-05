@@ -1,9 +1,8 @@
 <resources>
 
     <!-- list -->
-    <dimen name="list_side_margin">64dp</dimen>
-    <dimen name="list_toolbar_side_margin">52dp</dimen> <!-- minus 64 - 12 -->
-    <integer name="list_column_count">3</integer>
+    <dimen name="list_side_margin">4dp</dimen>
+    <integer name="list_column_count">1</integer>
 
     <!-- Layout Type -->
     <item name="main_layout" type="layout">@layout/main_tablet</item>

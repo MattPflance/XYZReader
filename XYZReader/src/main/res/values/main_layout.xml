@@ -1,7 +1,6 @@
 <resources>
 
     <!-- Main Activity -->
-    <dimen name="extended_app_bar_height">128dp</dimen>
     <dimen name="app_bar_horiz_padding">16dp</dimen>
 
     <dimen name="list_side_margin">4dp</dimen>
@@ -10,5 +9,8 @@
 
     <!-- Article List Item -->
     <dimen name="thumbnail_height">150dp</dimen>
+
+    <!-- Layout Type -->
+    <item name="main_layout" type="layout">@layout/main_non_tablet</item>
 
 </resources>

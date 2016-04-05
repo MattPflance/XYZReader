@@ -1,5 +1,6 @@
 package com.example.xyzreader.ui;
 
+import android.app.Activity;
 import android.app.LoaderManager;
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -34,7 +35,7 @@ import com.example.xyzreader.data.UpdaterService;
  * touched, lead to a {@link ArticleDetailActivity} representing item details. On tablets, the
  * activity presents a grid of items as cards.
  */
-public class ArticleListActivity extends AppCompatActivity {
+public class ArticleListActivity extends AppCompatActivity implements ArticleListFragment.ListFragmentCallback {
 
     private static final String DETAILFRAGMENT_TAG = "DFTAG";
 
@@ -64,4 +65,10 @@ public class ArticleListActivity extends AppCompatActivity {
 
     public static String getDetailfragmentTag() { return DETAILFRAGMENT_TAG; }
 
+    public void loadDetailFragment(ArticleListFragment.ViewHolder holder) {
+        ArticleDetailFragment fragment = ArticleDetailFragment.newInstance(holder.getItemId());
+        getFragmentManager().beginTransaction()
+                .replace(R.id.article_detail_fragment_container, fragment, DETAILFRAGMENT_TAG)
+                .commit();
+    }
 }

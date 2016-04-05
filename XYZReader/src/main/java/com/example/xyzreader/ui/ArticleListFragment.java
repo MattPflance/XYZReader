@@ -3,6 +3,7 @@ package com.example.xyzreader.ui;
 import android.app.Activity;
 import android.app.Fragment;
 import android.app.LoaderManager;
+import android.content.Context;
 import android.content.Intent;
 import android.content.Loader;
 import android.database.Cursor;
@@ -28,12 +29,17 @@ import com.example.xyzreader.data.UpdaterService;
 public class ArticleListFragment extends Fragment implements
         LoaderManager.LoaderCallbacks<Cursor> {
 
+    public interface ListFragmentCallback {
+        void loadDetailFragment(ViewHolder holder);
+    }
+
     private final String CURRENT_POSITION_KEY = "Current Position";
     private final String LAST_POSITION_KEY = "Last Position";
     private final int LAST_POSITION_UNKNOWN = -1;
 
     private RecyclerView mRecyclerView;
     private View mRootView;
+    private ListFragmentCallback mCallback;
 
     private int mCurrentPosition;
     private int mLastPosition;
@@ -43,6 +49,13 @@ public class ArticleListFragment extends Fragment implements
      * fragment (e.g. upon screen orientation changes).
      */
     public ArticleListFragment() {
+    }
+
+    @Override
+    public void onAttach(Activity activity) {
+        super.onAttach(activity);
+
+        mCallback = (ListFragmentCallback)activity;
     }
 
     @Override
@@ -162,6 +175,8 @@ public class ArticleListFragment extends Fragment implements
 
             if (mCurrentPosition == position) {
                 holder.cardView.setBackgroundColor(ContextCompat.getColor(mRootView.getContext(), R.color.theme_accent));
+                if (mLastPosition == LAST_POSITION_UNKNOWN)
+                    mCallback.loadDetailFragment(holder);
             } else {
                 holder.cardView.setBackgroundColor(ContextCompat.getColor(mRootView.getContext(), R.color.white));
             }

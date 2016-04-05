@@ -173,7 +173,7 @@ public class ArticleListFragment extends Fragment implements
                     mCursor.getString(ArticleLoader.Query.THUMB_URL),
                     ImageLoaderHelper.getInstance(getActivity()).getImageLoader());
 
-            if (mCurrentPosition == position) {
+            if (mCurrentPosition == position && ArticleListActivity.getTwoPane()) {
                 holder.cardView.setBackgroundColor(ContextCompat.getColor(mRootView.getContext(), R.color.theme_accent));
                 if (mLastPosition == LAST_POSITION_UNKNOWN)
                     mCallback.loadDetailFragment(holder);

@@ -39,7 +39,6 @@ public class ArticleDetailFragment extends Fragment implements
 
     private static final String TAG = "ArticleDetailFragment";
     public static final String ARG_ITEM_ID = "item_id";
-    private final long DEFAULT_ITEM_ID = 2891;
 
     private Cursor mCursor;
     private long mItemId;
@@ -68,14 +67,8 @@ public class ArticleDetailFragment extends Fragment implements
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        Bundle args = getArguments();
-
-        if (args == null) {
-            mItemId = DEFAULT_ITEM_ID;
-        } else {
-            if (args.containsKey(ARG_ITEM_ID)) {
-                mItemId = args.getLong(ARG_ITEM_ID);
-            }
+        if (getArguments().containsKey(ARG_ITEM_ID)) {
+            mItemId = getArguments().getLong(ARG_ITEM_ID);
         }
 
         setHasOptionsMenu(true);
@@ -93,8 +86,7 @@ public class ArticleDetailFragment extends Fragment implements
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-            Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         mRootView = inflater.inflate(R.layout.fragment_article_detail, container, false);
 
         mPhotoView = (ImageView) mRootView.findViewById(R.id.photo);

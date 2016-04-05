@@ -1,8 +1,10 @@
 <resources>
 
     <!-- Main Activity -->
-    <integer name="list_column_count">3</integer>
+    <integer name="list_column_count">1</integer>
+    <dimen name="article_list_width">200dp</dimen>
 
-    <!-- Article List Item -->
+    <!-- Layout Type -->
+    <item name="main_layout" type="layout">@layout/main_tablet</item>
 
 </resources>

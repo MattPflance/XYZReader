@@ -37,6 +37,9 @@ import com.example.xyzreader.data.UpdaterService;
 public class ArticleListActivity extends AppCompatActivity {
 
     private static final String DETAILFRAGMENT_TAG = "DFTAG";
+
+    private static boolean mTwoPane = false;
+
     private ArticleDetailFragment mArticleDetailFragment;
 
     @Override
@@ -45,13 +48,20 @@ public class ArticleListActivity extends AppCompatActivity {
         setContentView(R.layout.activity_article_list);
 
         if (findViewById(R.id.article_detail_fragment_container) != null){
+
+            mTwoPane = true;
+
             if (savedInstanceState == null) {
-                mArticleDetailFragment = new ArticleDetailFragment();
+                mArticleDetailFragment = ArticleDetailFragment.newInstance(0);
                 getFragmentManager().beginTransaction()
                         .add(R.id.article_detail_fragment_container, mArticleDetailFragment, DETAILFRAGMENT_TAG)
                         .commit();
             }
         }
     }
+
+    public static boolean getTwoPane() { return mTwoPane; }
+
+    public static String getDetailfragmentTag() { return DETAILFRAGMENT_TAG; }
 
 }

@@ -5,6 +5,7 @@ import android.app.LoaderManager;
 import android.content.Intent;
 import android.content.Loader;
 import android.database.Cursor;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
@@ -97,8 +98,17 @@ public class ArticleListFragment extends Fragment implements
             view.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    startActivity(new Intent(Intent.ACTION_VIEW,
-                            ItemsContract.Items.buildItemUri(getItemId(vh.getAdapterPosition()))));
+                    if (ArticleListActivity.getTwoPane()) {
+                        // Replace the detail fragment
+                        ArticleDetailFragment fragment = ArticleDetailFragment.newInstance(getItemId(vh.getAdapterPosition()));
+
+                        getFragmentManager().beginTransaction()
+                                .replace(R.id.article_detail_fragment_container, fragment, ArticleListActivity.getDetailfragmentTag())
+                                .commit();
+                    } else {
+                        Uri uri = ItemsContract.Items.buildItemUri(getItemId(vh.getAdapterPosition()));
+                        startActivity(new Intent(Intent.ACTION_VIEW, uri));
+                    }
                 }
             });
             return vh;

@@ -4,9 +4,7 @@
     <dimen name="app_bar_horiz_padding">16dp</dimen>
     <dimen name="list_side_margin">4dp</dimen>
     <integer name="list_column_count">2</integer>
-
-    <!-- Article List Item -->
-    <dimen name="article_list_max_width">400dp</dimen>
+    <dimen name="article_list_width">400dp</dimen>
 
     <!-- Layout Type -->
     <item name="main_layout" type="layout">@layout/main_tablet</item>

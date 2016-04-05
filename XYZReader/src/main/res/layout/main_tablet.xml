@@ -6,7 +6,7 @@
     android:layout_marginTop="?attr/actionBarSize" >
 
     <fragment
-        android:layout_width="400dp"
+        android:layout_width="@dimen/article_list_width"
         android:layout_height="match_parent"
         android:name="com.example.xyzreader.ui.ArticleListFragment"
         android:id="@+id/article_list_fragment"/>
